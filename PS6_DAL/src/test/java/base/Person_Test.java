@@ -51,6 +51,19 @@ public class Person_Test {
 		
 	}
 	
+	@Test
+	public void TestAddPerson(Object deletePerson) {
+		PersonDomainModel addPerson = PersonDAL.getPerson(person1UUID);
+		
+		System.out.println(addPerson.getPersonID().toString());
+		
+		assertEquals(person1UUID.toString(), addPerson.getPersonID());
+		
+		PersonDAL.deletePerson(person1UUID);
+		person1 = PersonDAL.getPerson(person1UUID);
+		assertNull(deletePerson);
+	}
+	
 	
 
 }

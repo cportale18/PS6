@@ -39,6 +39,7 @@ public class PersonOverviewController {
 
     // Reference to the main application.
     private MainApp mainApp;
+	private UUID per;
 
     /**
      * The constructor.
@@ -114,7 +115,7 @@ public class PersonOverviewController {
         Person selectedPerson = personTable.getSelectionModel().getSelectedItem();
         if (selectedIndex >= 0) {
 
-        	
+			PersonDAL.deletePerson(per);
         	UUID perID = selectedPerson.getPersonID();
         	System.out.println("Try to delete: " + perID.toString());
         	
@@ -160,6 +161,7 @@ public class PersonOverviewController {
         	//		in the DAL
         	        	
             mainApp.getPersonData().add(tempPerson);
+            PersonDAL.addPerson(per);
         }
     }
 
@@ -193,6 +195,7 @@ public class PersonOverviewController {
             	
                 showPersonDetails(selectedPerson);
                 mainApp.RefreshPersonTable();
+                PersonDAL.updatePerson(updatePer);
             }
 
         } else {
