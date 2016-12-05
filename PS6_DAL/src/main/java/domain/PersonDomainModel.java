@@ -98,5 +98,4 @@ public class PersonDomainModel {
 	public void setMiddleName(String middleName) {
 		this.middleName = middleName;
 	}
-
 }

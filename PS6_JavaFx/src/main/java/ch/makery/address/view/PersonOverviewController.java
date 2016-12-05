@@ -187,7 +187,6 @@ public class PersonOverviewController {
             	updatePer.setPostalCode(selectedPerson.getPostalCode());
             	updatePer.setBirthday(selectedPerson.getBirthday());
             	
-
             	
             	//TODO: Delete the person, call the updatePerson(perID) method
             	//		in the DAL

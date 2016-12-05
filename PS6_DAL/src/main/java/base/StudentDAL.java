@@ -119,7 +119,6 @@ public class StudentDAL  {
 
 	}	
 	
-
 	public static StudentDomainModel updateStudent(StudentDomainModel stu) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction tx = null;
